@@ -64,7 +64,7 @@ dependencies {
     androidTestCompile 'org.hamcrest:hamcrest-core:1.1'
     androidTestCompile 'org.hamcrest:hamcrest-library:1.1'
 
-    androidTestCompile('junit:junit:4.11') {
+    androidTestCompile('junit:junit:4.12') {
         exclude module: 'hamcrest-core'
     }
     androidTestCompile('org.robolectric:robolectric:2.4') {
@@ -84,7 +84,6 @@ dependencies {
         exclude module: 'wagon-http-lightweight'
         exclude module: 'wagon-provider-api'
     }
-    androidTestCompile 'com.squareup:fest-android:1.0.+'
 }
 
 apply plugin: 'idea'
