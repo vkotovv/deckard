@@ -15,7 +15,7 @@ To start a new Android project:
 
 2. Set your `ANDROID_HOME` environment variable to `/usr/local/opt/android-sdk`.
 
-3. Run the Android SDK GUI and install API 19 and any other APIs you might need. You can start the GUI by invoking `android`
+3. Run the Android SDK GUI and install `API 19` and `Build-tools 21.1.2`. You can start the GUI by invoking `android`
 
 4. Download Deckard from GitHub:
     ```bash
@@ -54,7 +54,7 @@ For both IntelliJ IDEA and Android Studio, you will also need to change the clas
 ```
 * For Intellij, go to Project Structure -> Modules -> deckard-gradle pane. In the Dependencies tab, move the Module SDK dependency (i.e. Android API 19 Platform) to be the last item in the list.
 * For Android Studio, dependency ordering is currently not modifiable via any GUI. Therefore, you must modify the project iml file directly as such and reload the project:
-    
+
 ```
     	    	<orderEntry type="library" exported="" scope="TEST" name="wagon-provider-api-1.0-beta-6" level="project" />
     	    	<orderEntry type="library" exported="" scope="TEST" name="xercesMinimal-1.9.6.2" level="project" />
@@ -62,7 +62,7 @@ For both IntelliJ IDEA and Android Studio, you will also need to change the clas
     		</component>
     	</module>
 ```
-    
+
 NOTE: Android Studio aggressively re-writes your dependencies list (your .iml file) and subverts the technique used above to get the Android SDK to the bottom of the classpath. You will get the dreaded Stub! exception every time you re-open the project (and possibly more often).  For this reason we currently recommend IntelliJ; we hope this can be solved in the future.
 
 ### IntelliJ Extra Step
@@ -76,6 +76,6 @@ The above trick doesn't work for Android Studio, since that part of the module c
 
 ### Running the Robolectric Test
 You should now be able to `DeckardActivityRobolectricTest`. Run it as a normal JUnit test - make sure to choose the JUnit test runner and not the Android one.
- 
+
 ### Running the Espresso Test
 To run the Espresso test, you need to set up a Run Configuration. Go to `Edit Configurations -> Defaults -> Android Tests` and, after choosing  the correct module (deckard-gradle), fill in the `Specific instrumentation test runner` field. The easiest way is to click the ellipsis button on the right and type in `GITR`. This will find `GoogleInstrumentationTestRunner`, which is what you want. The fully-qualified class name will appear. Now you can right click on the test method in `DeckardEspressoTest` and choose the Android test runner.
