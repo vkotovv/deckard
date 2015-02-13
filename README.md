@@ -19,7 +19,7 @@ To start a new Android project:
     ```bash
     wget https://github.com/robolectric/deckard-gradle/archive/master.zip
     unzip master.zip
-    mv deckard-master my-new-project
+    mv deckard-gradle-master my-new-project
     ```
 
 4. In the project directory you should be able to run the Robolectric tests:
