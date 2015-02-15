@@ -13,7 +13,7 @@ To start a new Android project:
 
 1. Install [Android Studio](http://developer.android.com/sdk/index.html).
 
-2. Run the Android SDK GUI and install `API 19` and `Build-tools 21.1.2`.
+2. Run the [Android SDK Manager](http://developer.android.com/tools/help/sdk-manager.html) and install `API 19` and `Build-tools 21.1.2`.
 
 3. Download Deckard from GitHub:
     ```bash
@@ -29,12 +29,12 @@ To start a new Android project:
     ./gradlew clean test
     ```
 
-5. You should also be able to run the Espresso tests: 
+5. You should also be able to run the Espresso tests:
 
     ```bash
     ./gradlew clean connectedAndroidTest
     ```
-    
+
     Note: Make sure to start an Emulator or connect a device first so the test has something to connect to.
 
 6. Change the names of things from 'Deckard' to whatever is appropriate for your project. Package name, classes, build.gradle, and the AndroidManifest are good places to start.
