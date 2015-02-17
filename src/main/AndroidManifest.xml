@@ -4,9 +4,6 @@
           android:versionName="1.0.0-SNAPSHOT"
           package="com.example">
 
-    <uses-sdk android:minSdkVersion="18"
-              android:targetSdkVersion="18"/>
-
     <application android:name=".DeckardApplication">
         <activity android:name=".activity.DeckardActivity" android:screenOrientation="portrait">
             <intent-filter>
