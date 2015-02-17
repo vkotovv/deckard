@@ -6,6 +6,7 @@ android:
     - extra-android-m2repository
     - build-tools-21.1.2
     - android-19
+    - sys-img-armeabi-v7a-android-19
 
 script:
-    - ./gradlew test
+    - ./gradlew test connectedAndroidTest
