@@ -13,7 +13,8 @@ To start a new Android project:
 
 1. Install [Android Studio](http://developer.android.com/sdk/index.html).
 
-2. Run the [Android SDK Manager](http://developer.android.com/tools/help/sdk-manager.html) and install `API 19` and `Build-tools 21.1.2`.
+2. Run the [Android SDK Manager](http://developer.android.com/tools/help/sdk-manager.html) and install
+`API 19` and `Build-tools 21.1.2`.
 
 3. Download Deckard from GitHub:
     ```bash
@@ -44,13 +45,18 @@ To start a new Android project:
 ## Android Studio Support
 
 ### Compatibility
-Use the latest Android Studio. The most recent updates were run against Android Studio 1.0.1 with the 'Android Studio Unit Test' plugin available from 'Browse Repositories...'.
+Use the latest Android Studio. The most recent updates were run against Android Studio 1.1.0 with
+"Unit Testing support" enabled in Studio's Gradle settings.
 
 ### Importing
 Import the project into Android Studio by selecting 'Import Project' and selecting the project's `build.gradle`. When prompted, you can just pick the default gradle wrapper.
 
 ### Running the Robolectric Test
-You should now be able to `DeckardActivityRobolectricTest`. Run it as a normal JUnit test - make sure to choose the JUnit test runner and not the Android one.
+To run Robolectric tests (example can be found in DeckardActivityTest) open Studio's
+"Build Variants" pane and change the "Test Artifact" to "Unit Tests". You can then run
+Robolectric tests using the JUnit test runner.
 
 ### Running the Espresso Test
-The Espresso tests are runnable with the Android test runner within Android Studio.
+To run Robolectric tests (example can be found in DeckardEspressoTest) open Studio's
+"Build Variants" pane and change the "Test Artifact" to "Android Instrumentation Tests".
+You can then run Espresso tests using the Android test runner.
