@@ -23,14 +23,16 @@ To start a new Android project:
     mv deckard-gradle-master my-new-project
     ```
 
-4. In the project directory you should be able to run the Robolectric tests:
+4. Create a `local.properties` [file](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Simple-build-files) in the root of the project that points to
+your SDK installation location. Importing the project into Android Studio (detailed below) will do this for you.
+
+5. In the project directory you should be able to run the Robolectric tests:
 
     ```bash
-    cd my-new-project
     ./gradlew clean test
     ```
 
-5. You should also be able to run the Espresso tests:
+6. You should also be able to run the Espresso tests:
 
     ```bash
     ./gradlew clean connectedAndroidTest
@@ -38,9 +40,9 @@ To start a new Android project:
 
     Note: Make sure to start an Emulator or connect a device first so the test has something to connect to.
 
-6. Change the names of things from 'Deckard' to whatever is appropriate for your project. Package name, classes, build.gradle, and the AndroidManifest are good places to start.
+7. Change the names of things from 'Deckard' to whatever is appropriate for your project. Package name, classes, build.gradle, and the AndroidManifest are good places to start.
 
-7. Build an app. Win.
+8. Build an app. Win.
 
 ## Android Studio Support
 
