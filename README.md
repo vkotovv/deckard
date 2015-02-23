@@ -11,7 +11,7 @@ Deckard imports easily into the latest editions of Android Studio with minimal s
 
 To start a new Android project:
 
-1. Install [Android Studio](http://developer.android.com/sdk/index.html).
+1. Install [Android Studio 1.1.0](http://developer.android.com/sdk/index.html).
 
 2. Run the [Android SDK Manager](http://developer.android.com/tools/help/sdk-manager.html) and install
 `API 19` and `Build-tools 21.1.2`.
@@ -47,7 +47,7 @@ your SDK installation location. Importing the project into Android Studio (detai
 ## Android Studio Support
 
 ### Compatibility
-Use the latest Android Studio. The most recent updates were run against Android Studio 1.1.0 with
+Deckard gradle is designed to run against Android Studio 1.1.0 with
 "Unit Testing support" enabled in Studio's Gradle settings.
 
 ### Importing
