@@ -53,7 +53,7 @@ your SDK installation location. Importing the project into Android Studio (detai
 
 ### Compatibility
 Deckard gradle is designed to run against Android Studio 1.1.0 with
-"Unit Testing support" enabled in Studio's Gradle settings.
+[Unit Testing support](https://sites.google.com/a/android.com/tools/tech-docs/unit-testing-support) enabled in Studio's Gradle settings.
 
 ### Importing
 Import the project into Android Studio by selecting 'Import Project' and selecting the project's `build.gradle`. When prompted, you can just pick the default gradle wrapper.
