@@ -14,8 +14,13 @@ To start a new Android project:
 1. Install [Android Studio 1.1.0](http://developer.android.com/sdk/index.html).
 
 2. Run the [Android SDK Manager](http://developer.android.com/tools/help/sdk-manager.html) and install
-`API 19` and `Build-tools 21.1.2`.
-
+`API 19` and `Build-tools 21.1.2`. You can also install the packages from the terminal, using [android](https://developer.android.com/tools/help/android.html) from your `sdk/tools/` directory:
+    ```bash
+    android list sdk --all | grep -E "( 25-| 5-)"
+    #   5- Android SDK Build-tools, revision 21.1.2
+    #  25- SDK Platform Android 4.4.2, API 19, revision 4
+    android update sdk --all --no-ui --filter 5,25
+    ```
 3. Download Deckard from GitHub:
     ```bash
     wget https://github.com/robolectric/deckard-gradle/archive/master.zip
@@ -48,7 +53,7 @@ your SDK installation location. Importing the project into Android Studio (detai
 
 ### Compatibility
 Deckard gradle is designed to run against Android Studio 1.1.0 with
-"Unit Testing support" enabled in Studio's Gradle settings.
+[Unit Testing support](https://sites.google.com/a/android.com/tools/tech-docs/unit-testing-support) enabled in Studio's Gradle settings.
 
 ### Importing
 Import the project into Android Studio by selecting 'Import Project' and selecting the project's `build.gradle`. When prompted, you can just pick the default gradle wrapper.
