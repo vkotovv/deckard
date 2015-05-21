@@ -14,12 +14,14 @@ To start a new Android project:
 1. Install [Android Studio 1.1.0](http://developer.android.com/sdk/index.html).
 
 2. Run the [Android SDK Manager](http://developer.android.com/tools/help/sdk-manager.html) and install
-`API 19` and `Build-tools 21.1.2`. You can also install the packages from the terminal, using [android](https://developer.android.com/tools/help/android.html) from your `sdk/tools/` directory:
+`API 19`, `Build-tools 21.1.2` and the support library. You can also install the packages from the terminal, using [android](https://developer.android.com/tools/help/android.html) from your `sdk/tools/` directory:
     ```bash
     android list sdk --all | grep -E "( 25-| 5-)"
     #   5- Android SDK Build-tools, revision 21.1.2
     #  25- SDK Platform Android 4.4.2, API 19, revision 4
     android update sdk --all --no-ui --filter 5,25
+    android update sdk --all --no-ui --filter extra-android-support
+    android update sdk --all --no-ui --filter extra-android-m2repository
     ```
 3. Download Deckard from GitHub:
     ```bash
