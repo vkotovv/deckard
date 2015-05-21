@@ -15,37 +15,38 @@ To start a new Android project:
 
 2. Run the [Android SDK Manager](http://developer.android.com/tools/help/sdk-manager.html) and install
 `API 19`, `Build-tools 21.1.2` and the support library. You can also install the packages from the terminal, using [android](https://developer.android.com/tools/help/android.html) from your `sdk/tools/` directory:
-    ```bash
-    android list sdk --all | grep -E "( 25-| 5-)"
-    #   5- Android SDK Build-tools, revision 21.1.2
-    #  25- SDK Platform Android 4.4.2, API 19, revision 4
-    android update sdk --all --no-ui --filter 5,25
-    android update sdk --all --no-ui --filter extra-android-support
-    android update sdk --all --no-ui --filter extra-android-m2repository
-    ```
+
+```bash
+android update sdk --all --no-ui --filter build-tools-21.1.2
+android update sdk --all --no-ui --filter android-19
+android update sdk --all --no-ui --filter extra-android-support
+android update sdk --all --no-ui --filter extra-android-m2repository
+```
+
 3. Download Deckard from GitHub:
-    ```bash
-    wget https://github.com/robolectric/deckard-gradle/archive/master.zip
-    unzip master.zip
-    mv deckard-gradle-master my-new-project
-    ```
+
+```bash
+wget https://github.com/robolectric/deckard-gradle/archive/master.zip
+unzip master.zip
+mv deckard-gradle-master my-new-project
+```
 
 4. Create a `local.properties` [file](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Simple-build-files) in the root of the project that points to
 your SDK installation location. Importing the project into Android Studio (detailed below) will do this for you.
 
 5. In the project directory you should be able to run the Robolectric tests:
 
-    ```bash
-    ./gradlew clean test
-    ```
+```bash
+./gradlew clean test
+```
 
 6. You should also be able to run the Espresso tests:
 
-    ```bash
-    ./gradlew clean connectedAndroidTest
-    ```
+```bash
+./gradlew clean connectedAndroidTest
+```
 
-    Note: Make sure to start an Emulator or connect a device first so the test has something to connect to.
+Note: Make sure to start an Emulator or connect a device first so the test has something to connect to.
 
 7. Change the names of things from 'Deckard' to whatever is appropriate for your project. Package name, classes, build.gradle, and the AndroidManifest are good places to start.
 
