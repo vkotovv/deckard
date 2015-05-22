@@ -67,6 +67,6 @@ To run Robolectric tests (example can be found in DeckardActivityTest) open Stud
 Robolectric tests using the JUnit test runner.
 
 ### Running the Espresso Test
-To run Robolectric tests (example can be found in DeckardEspressoTest) open Studio's
+To run Espresso tests (example can be found in DeckardEspressoTest) open Studio's
 "Build Variants" pane and change the "Test Artifact" to "Android Instrumentation Tests".
 You can then run Espresso tests using the Android test runner.
