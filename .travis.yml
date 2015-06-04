@@ -1,11 +1,13 @@
 language: android
-jdk: oraclejdk7
+
+jdk:
+ - oraclejdk8
 
 android:
   components:
     - extra-android-m2repository
-    - build-tools-21.1.2
-    - android-19
+    - build-tools-22.0.1
+    - android-22
     - sys-img-armeabi-v7a-android-19
 
 before_script:
@@ -15,4 +17,14 @@ before_script:
   - adb shell input keyevent 82 &
 
 script:
-    - ./gradlew test connectedAndroidTest
+    - ./gradlew clean test connectedAndroidTest
+
+notifications:
+  email: false
+
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.gradle
+

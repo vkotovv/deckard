@@ -6,6 +6,8 @@ import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
+import com.example.BuildConfig;
+
 import static org.junit.Assert.assertTrue;
 
 @RunWith(RobolectricTestRunner.class)
