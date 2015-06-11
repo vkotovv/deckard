@@ -40,7 +40,9 @@ dependencies {
 
     // Espresso
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2'
-    
+    androidTestCompile 'com.android.support.test:runner:0.3'
+    androidTestCompile 'com.android.support.test:rules:0.3'
+
     // Robolectric
     testCompile 'junit:junit:4.12'
     testCompile 'org.hamcrest:hamcrest-library:1.3'
