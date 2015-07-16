@@ -16,6 +16,6 @@ public class DeckardActivityTest {
 
     @Test
     public void testSomething() throws Exception {
-        assertTrue(Robolectric.buildActivity(DeckardActivity.class).create().get() != null);
+        assertTrue(Robolectric.setupActivity(DeckardActivity.class) != null);
     }
 }
