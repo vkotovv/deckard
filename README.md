@@ -1,4 +1,4 @@
-# Deckard (for Gradle)
+# Deckard
 [![Build Status](https://travis-ci.org/robolectric/deckard.svg?branch=master)](https://travis-ci.org/robolectric/deckard)
 [![Circle CI](https://circleci.com/gh/robolectric/deckard.svg?style=svg)](https://circleci.com/gh/robolectric/deckard)
 
@@ -27,13 +27,12 @@ android update sdk --all --no-ui --filter extra-android-m2repository
 3. Download Deckard from GitHub:
 
 ```bash
-wget https://github.com/robolectric/deckard-gradle/archive/master.zip
+wget https://github.com/robolectric/deckard/archive/master.zip
 unzip master.zip
-mv deckard-gradle-master my-new-project
+mv deckard-master my-new-project
 ```
 
 4. Create a `local.properties` [file](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Simple-build-files) in the root of the project that points to
-your SDK installation location. Importing the project into Android Studio (detailed below) will do this for you.
 
 5. In the project directory you should be able to run the Robolectric tests:
 
@@ -56,7 +55,7 @@ Note: Make sure to start an Emulator or connect a device first so the test has s
 ## Android Studio Support
 
 ### Compatibility
-Deckard gradle is designed to run against Android Studio 1.1.0 with
+Deckard is designed to run against Android Studio 1.1.0 with
 [Unit Testing support](https://sites.google.com/a/android.com/tools/tech-docs/unit-testing-support) enabled in Studio's Gradle settings.
 
 ### Importing
