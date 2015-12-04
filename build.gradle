@@ -4,19 +4,23 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.3.1'
+        classpath 'com.android.tools.build:gradle:1.5.0'
     }
+}
+
+repositories {
+    jcenter()
 }
 
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion '22.0.1'
+    compileSdkVersion 23
+    buildToolsVersion '23.0.2'
 
     defaultConfig {
         minSdkVersion 18
-        targetSdkVersion 22
+        targetSdkVersion 23
         versionCode 2
         versionName "1.0.0-SNAPSHOT"
         applicationId "com.example"
@@ -29,22 +33,17 @@ android {
 }
 
 dependencies {
-    repositories {
-        jcenter()
-    }
-
     // Support v4
-    compile 'com.android.support:support-v4:22.2.0'
+    compile 'com.android.support:support-v4:23.1.1'
 
     // Espresso
-    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2'
-    androidTestCompile 'com.android.support.test:runner:0.3'
-    androidTestCompile 'com.android.support.test:rules:0.3'
+	androidTestCompile 'com.android.support:support-annotations:23.1.1'
+    androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.2.1'
 
     // Robolectric
     testCompile 'junit:junit:4.12'
     testCompile 'org.hamcrest:hamcrest-library:1.3'
     testCompile 'org.apache.maven:maven-ant-tasks:2.1.3' // fixes issue on linux/mac
-    testCompile('org.robolectric:robolectric:3.0')
+    testCompile 'org.robolectric:robolectric:3.0'
 }
 
