@@ -34,10 +34,10 @@ android {
 
 dependencies {
     // Support v4
-    compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.android.support:support-v4:23.2.0'
 
     // Espresso
-    androidTestCompile 'com.android.support:support-annotations:23.1.1'
+    androidTestCompile 'com.android.support:support-annotations:23.2.0'
     androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.2.1'
 
     // Robolectric
