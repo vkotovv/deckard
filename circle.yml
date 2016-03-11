@@ -1,0 +1,17 @@
+dependencies:
+  cache_directories:
+    - ~/.android
+  pre:
+    - >
+      echo y |
+      android update sdk --all --no-ui
+      --filter android-23,tools,platform-tools
+    - >
+      echo y |
+      android update sdk --all --no-ui --filter build-tools-23.0.2
+    - >
+      echo y |
+      android update sdk --all --no-ui
+      --filter extra-android-support,extra-android-m2repository
+
+
