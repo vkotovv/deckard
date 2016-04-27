@@ -4,7 +4,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.0'
+        classpath 'com.android.tools.build:gradle:2.1.0'
     }
 }
 
@@ -32,12 +32,19 @@ android {
     }
 }
 
+
+configurations.all {
+    resolutionStrategy {
+        force 'com.android.support:support-v4:23.3.0'
+    }
+}
+
 dependencies {
     // Support v4
-    compile 'com.android.support:support-v4:23.2.0'
+    compile 'com.android.support:support-v4:23.3.0'
 
     // Espresso
-    androidTestCompile 'com.android.support:support-annotations:23.2.0'
+    androidTestCompile 'com.android.support:support-annotations:23.3.0'
     androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.2.1'
 
     // Robolectric
