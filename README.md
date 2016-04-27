@@ -15,7 +15,7 @@ Deckard imports easily into the latest editions of Android Studio with minimal s
 To start a new Android project:
 
 1. Install [Android Studio 2.1](http://developer.android.com/sdk/index.html).
-2. Run the [Android SDK Manager](http://developer.android.com/tools/help/sdk-manager.html) and install `API 23`, `Build-tools 23.0.2` and the support library. You can also install the packages from the terminal, using [android](https://developer.android.com/tools/help/android.html) from your `sdk/tools/` directory:
+2. Run the [Android SDK Manager](http://developer.android.com/tools/help/sdk-manager.html) and install `API 23`, `Build-tools 23.0.2` and the support library and repository. You can also install the packages from the terminal, using [android](https://developer.android.com/tools/help/android.html) from your `sdk/tools/` directory:
 ```bash
 android update sdk --all --no-ui --filter build-tools-23.0.2 && \
 android update sdk --all --no-ui --filter android-23 && \
@@ -28,7 +28,7 @@ wget https://github.com/robolectric/deckard/archive/master.zip
 unzip master.zip
 mv deckard-master my-new-project
 ```
-4. Create a `local.properties` [file](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Simple-build-files) in the root of the project that points to
+4. Create a `local.properties` [file](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Simple-build-files) in the root of the project that points to your Android SDK location. Importing the project into Android Studio will do this for you.
 5. In the project directory you should be able to run the Robolectric tests:
 ```bash
 ./gradlew clean test
