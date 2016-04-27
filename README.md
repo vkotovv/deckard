@@ -16,27 +16,31 @@ To start a new Android project:
 
 1. Install [Android Studio 2.1](http://developer.android.com/sdk/index.html).
 2. Run the [Android SDK Manager](http://developer.android.com/tools/help/sdk-manager.html) and install `API 23`, `Build-tools 23.0.2` and the support library and repository. You can also install the packages from the terminal, using [android](https://developer.android.com/tools/help/android.html) from your `sdk/tools/` directory:
-```bash
-android update sdk --all --no-ui --filter build-tools-23.0.2 && \
-android update sdk --all --no-ui --filter android-23 && \
-android update sdk --all --no-ui --filter extra-android-support && \
-android update sdk --all --no-ui --filter extra-android-m2repository
-```
+  ```
+  android update sdk --all --no-ui --filter build-tools-23.0.2 && \
+  android update sdk --all --no-ui --filter android-23 && \
+  android update sdk --all --no-ui --filter extra-android-support && \
+  android update sdk --all --no-ui --filter extra-android-m2repository
+  ```
+
 3. Download Deckard from GitHub:
-```bash
-wget https://github.com/robolectric/deckard/archive/master.zip
-unzip master.zip
-mv deckard-master my-new-project
-```
+  ```bash
+  wget https://github.com/robolectric/deckard/archive/master.zip
+  unzip master.zip
+  mv deckard-master my-new-project
+  ```
+
 4. Create a `local.properties` [file](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Simple-build-files) in the root of the project that points to your Android SDK location. Importing the project into Android Studio will do this for you.
 5. In the project directory you should be able to run the Robolectric tests:
-```bash
-./gradlew clean test
-```
+  ```bash
+  ./gradlew clean test
+  ```
+
 6. You should also be able to run the Espresso tests:
-```bash
-./gradlew clean connectedAndroidTest
-```
+  ```bash
+  ./gradlew clean connectedAndroidTest
+  ```
+
 Note: Make sure to start an Emulator or connect a device first so the test has something to connect to.
 7. Change the names of things from 'Deckard' to whatever is appropriate for your project. Package name, classes, build.gradle, and the AndroidManifest are good places to start.
 8. Build an app. Win.
