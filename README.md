@@ -40,7 +40,7 @@ To start a new Android project:
   ```bash
   ./gradlew clean connectedAndroidTest
   ```
-
-Note: Make sure to start an Emulator or connect a device first so the test has something to connect to.
+  Note: Make sure to start an Emulator or connect a device first so the test has something to connect to.
+  
 7. Change the names of things from 'Deckard' to whatever is appropriate for your project. Package name, classes, build.gradle, and the AndroidManifest are good places to start.
 8. Build an app. Win.
