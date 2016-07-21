@@ -1,21 +1,24 @@
+machine:
+  java:
+    version: oraclejdk8
 dependencies:
   cache_directories:
     - ~/.android
   pre:
     - >
-      if [[ ! -d "$ANDROID_HOME/sources/android-23" ]]; then
+      if [[ ! -d "$ANDROID_HOME/sources/android-24" ]]; then
       echo y |
       android update sdk --all --no-ui
-      --filter android-23 ;
+      --filter android-24 ;
       fi
     - >
       echo y |
       android update sdk --all --no-ui
       --filter tools,platform-tools
     - >
-      if [[ ! -d "$ANDROID_HOME/build-tools/23.0.2" ]]; then
+      if [[ ! -d "$ANDROID_HOME/build-tools/24.0.1" ]]; then
       echo y |
-      android update sdk --all --no-ui --filter build-tools-23.0.2 ;
+      android update sdk --all --no-ui --filter build-tools-24.0.1 ;
       fi
     - >
       if [[ ! -d "$ANDROID_HOME/extras/android/support" ]]; then
