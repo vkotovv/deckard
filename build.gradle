@@ -1,10 +1,13 @@
 buildscript {
     repositories {
+        maven {
+            url 'https://maven.google.com'
+        }
         jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:3.0.0-alpha8'
     }
 }
 
@@ -17,16 +20,22 @@ repositories {
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 26
     buildToolsVersion '26.0.0'
 
     defaultConfig {
         minSdkVersion 18
-        targetSdkVersion 25
+        targetSdkVersion 26
         versionCode 2
         versionName "1.0.0-SNAPSHOT"
         applicationId "com.example"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
     }
 
     packagingOptions {
@@ -43,7 +52,7 @@ configurations.all {
 
 dependencies {
     // Support v4
-    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:support-v4:26'
 
     // Espresso
     androidTestCompile 'com.android.support:support-annotations:25.3.1'
