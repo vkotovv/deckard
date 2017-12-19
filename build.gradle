@@ -58,5 +58,5 @@ dependencies {
 
     // Robolectric
     testImplementation 'junit:junit:4.12'
-    testImplementation 'org.robolectric:robolectric:3.6'
+    testImplementation 'org.robolectric:robolectric:3.6.1'
 }
