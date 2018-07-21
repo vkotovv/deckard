@@ -2,12 +2,20 @@ buildscript {
     repositories {
         jcenter()
         google()
+        mavenLocal()
+        maven { url 'https://plugins.gradle.org/m2/' }
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.0-beta6'
+        classpath 'com.android.tools.build:gradle:3.1.0'
+        classpath "net.ltgt.gradle:gradle-errorprone-plugin:0.0.15"
     }
 }
+
+//plugins {
+//    id "net.ltgt.errorprone" version "0.0.15" apply false
+//    id 'net.ltgt.apt' version '0.14' apply false
+//}
 
 repositories {
     jcenter()
@@ -17,10 +25,12 @@ repositories {
 }
 
 apply plugin: 'com.android.application'
+//apply plugin: 'net.ltgt.apt'
+apply plugin: 'net.ltgt.errorprone'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion '26.0.1'
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
         minSdkVersion 18
@@ -47,7 +57,24 @@ configurations.all {
         force 'com.android.support:support-v4:26.0.1'
     }
 }
+afterEvaluate {
 
+    tasks.withType(JavaCompile) {
+        println "errorprone: ${configurations.errorprone.asPath}"
+        options.compilerArgs += [
+                '-processorpath',
+                configurations.errorprone.asPath,
+//            '-Xplugin:ErrorProne',
+//            '-Xep:ShadowUsageCheck:ERROR',
+//            '-XepPatchChecks:ShadowUsageCheck',
+//            '-XepPatchLocation:/tmp'
+        ]
+//    tasks.withType(JavaCompile)*.options.compilerArgs += [ '-processorargs', configurations.apt.asPath ]
+
+//    options.fork = true
+    }
+
+}
 dependencies {
     // Support v4
     implementation 'com.android.support:support-v4:26.1.0'
@@ -59,4 +86,8 @@ dependencies {
     // Robolectric
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.robolectric:robolectric:3.5'
+
+    errorprone 'com.google.errorprone:error_prone_core:2.3.1'
+    errorprone 'org.robolectric:errorprone:4.0-alpha-3'
+//    annotationProcessor 'org.robolectric:errorprone:4.0-alpha-3'
 }
