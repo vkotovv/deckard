@@ -5,6 +5,7 @@ import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.shadows.ShadowApplication;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -15,7 +16,10 @@ public class DeckardActivityTest {
 
     @Test
     public void testSomething() throws Exception {
-        assertNotNull(shadowOf(RuntimeEnvironment.application));
         assertTrue(Robolectric.setupActivity(DeckardActivity.class) != null);
+
+        ShadowApplication shadowApplication = ShadowApplication.getInstance();
+        assertTrue(shadowOf(shadowApplication.getLatestWakeLock()).isHeld());
+        assertTrue(shadowOf(shadowApplication.getLatestWakeLock()).isReferenceCounted());
     }
 }
