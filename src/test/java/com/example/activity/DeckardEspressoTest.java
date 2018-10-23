@@ -3,7 +3,6 @@ package com.example.activity;
 import com.example.R;
 
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -16,7 +15,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
 @RunWith(AndroidJUnit4.class)
-public class DeckardEspressoTest  {
+public class DeckardEspressoTest {
 
     @Before
     public void launchActivity() {
