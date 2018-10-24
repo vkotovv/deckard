@@ -1,7 +1,7 @@
 buildscript {
     repositories {
-        jcenter()
         google()
+        jcenter()
     }
 
     dependencies {
@@ -11,10 +11,10 @@ buildscript {
 
 repositories {
     // add staging repository URL here if testing staging
+    google()
     jcenter()
     mavenCentral()
     mavenLocal()
-    google()
 }
 
 apply plugin: 'com.android.application'

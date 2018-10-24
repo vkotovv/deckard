@@ -1,0 +1,12 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/android:api-28-alpha
+    steps:
+      - checkout
+      - run:
+          command: |
+            ./gradlew test
+      - store_test_results:
+          path: build/test-results
