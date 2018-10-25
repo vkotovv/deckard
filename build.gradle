@@ -11,14 +11,14 @@ buildscript {
 
 repositories {
     // add staging repository URL here if testing staging
-    maven {
-        url "https://oss.sonatype.org/content/repositories/orgrobolectric-1177"
-    }
+//    maven {
+//        url "https://oss.sonatype.org/content/repositories/orgrobolectric-1177"
+//    }
+
     google()
     jcenter()
     mavenCentral()
     mavenLocal()
-
 }
 
 apply plugin: 'com.android.application'
