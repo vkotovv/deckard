@@ -11,6 +11,9 @@ buildscript {
 
 repositories {
     // add staging repository URL here if testing staging
+    maven {
+        url "https://oss.sonatype.org/content/repositories/orgrobolectric-1177"
+    }
     google()
     jcenter()
     mavenCentral()
@@ -49,13 +52,13 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.0.0'
 
     // Espresso
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-beta02'
-    androidTestImplementation 'androidx.test:core:1.0.0-beta02'
-    androidTestImplementation 'androidx.test.ext:junit:1.0.0-beta02'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    androidTestImplementation 'androidx.test:core:1.0.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.0.0'
 
     // Robolectric
-    testImplementation 'androidx.test.espresso:espresso-core:3.1.0-beta02'
-    testImplementation 'androidx.test:core:1.0.0-beta02'
-    testImplementation 'androidx.test.ext:junit:1.0.0-beta02'
-    testImplementation 'org.robolectric:robolectric:4.0-beta-2'
+    testImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    testImplementation 'androidx.test:core:1.0.0'
+    testImplementation 'androidx.test.ext:junit:1.0.0'
+    testImplementation 'org.robolectric:robolectric:4.0'
 }
